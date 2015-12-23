@@ -1,8 +1,9 @@
 module.exports = {
-    entry: ['./client.js'],
+    entry: ['./src/client.js'],
     module: {
         loaders: [
-            { test: /\.js$/, loader: 'babel', exclude: /node_modules/ }
+            { test: /\.js$/, loader: 'babel', exclude: /node_modules/ },
+            { test: /\.sass$/, loader: 'style!css!sass?indentedSyntax' }
         ]
     },
     output: {
