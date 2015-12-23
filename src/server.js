@@ -26,8 +26,9 @@ let scaffolding = (meta, inner) =>
             m('script', {src: '/bundle.js', type: 'text/javascript'})
         ])
     ])
-    
-app.use(koaStatic(__dirname + '/static'))
+
+app.use(koaStatic(__dirname + '/../static'))
+
 app.use(function *(next) {
     this.store = createStore(simpleRouter)
 

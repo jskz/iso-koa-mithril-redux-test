@@ -9,9 +9,15 @@ module.exports = {
     },
 
     view: function(controller) {
-        return m('div', {}, [
-            m("a[href='/']", {config: m.route}, ['Home']),
-            m("a[href='/about']", {config: m.route}, ['About'])
+        return m('nav', {id: 'navigation'}, [
+            m('ul', {}, [
+                m('li', {}, [
+                    m("a[href='/']", {config: m.route}, ['Home'])
+                ]),
+                m('li', {}, [
+                    m("a[href='/about']", {config: m.route}, ['About'])
+                ])
+            ])
         ])
     }
 }

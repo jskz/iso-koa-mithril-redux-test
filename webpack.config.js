@@ -1,5 +1,8 @@
 module.exports = {
-    entry: ['./src/client.js'],
+    entry: [
+        './src/client.js',
+        './src/sass/style.sass'
+    ],
     module: {
         loaders: [
             { test: /\.js$/, loader: 'babel', exclude: /node_modules/ },
