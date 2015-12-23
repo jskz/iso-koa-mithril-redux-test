@@ -1,7 +1,7 @@
 {
-  "name": "iso-koa-redux-test",
+  "name": "iso-koa-mithril-redux-test",
   "version": "1.0.0",
-  "description": "Isomorphic Koa webapp using Redux for state control & routing.",
+  "description": "Isomorphic Koa webapp using Redux on both client and server for state & routing.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
