@@ -17,7 +17,8 @@ module.exports = {
                 m('li', {}, [
                     m("a[href='/about']", {config: m.route}, ['About'])
                 ])
-            ])
+            ]),
+            m('hr')
         ])
     }
 }

@@ -7,6 +7,7 @@ import routes from './routes'
 window.addEventListener('load', function load(event) {
     let origin = document.getElementById('origin')
     let store = createStore(simpleRouter)
+    let lastRoute = null
 
     if(origin !== null) {
         m.route.mode = 'pathname'
@@ -14,16 +15,13 @@ window.addEventListener('load', function load(event) {
     }
 
     store.subscribe(() => {
-        let lastRoute = null
         let route = null
         const state = store.getState()
 
         if(lastRoute != (route = state.get('route'))) {
-            console.log('Pre route... ' + lastRoute)
             m.route.mode = 'pathname'
             m.route(route)
 
-            console.log('New route: ' + route)
             lastRoute = route
         }
     })
